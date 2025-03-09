@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "d54d10a4-4219-4541-b259-d7a77d45d776",
+		"name": "BlogCRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41717468"
+	},
+	"item": [
+		{
+			"name": "getAllBlogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/blogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBlog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "some_content",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "someon",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "some_content",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Acer/Desktop/Screenshot_2.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/blogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBlogByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/blogs/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"blogs",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67cd456e2171daa5ba4ac9c9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBlogById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "changed_name",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/blogs/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"blogs",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67cd456e2171daa5ba4ac9c9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBlogById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/blogs/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"blogs",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67cd456e2171daa5ba4ac9c9"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
