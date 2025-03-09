@@ -10,6 +10,7 @@ let addBlog = async (req, res, next) => {
   blogs.save();
   response(res, { massage: "Succesfully added!", blogs }, 201);
 };
+
 let updateBlogById = async (req, res, next) => {
   let id = req.params.id;
   let Allblogs = await blogModel.find();
