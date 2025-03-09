@@ -1,7 +1,6 @@
 const { response } = require("../utils/response");
 const userModel = require("../models/user.model");
 const { getAllBlogs } = require("./blog.controller");
-const multer = require("multer");
 
 let addUser = async (req, res, next) => {
   let users = await userModel.create(req.body);
